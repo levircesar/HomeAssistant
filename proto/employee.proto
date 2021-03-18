@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+package employee;
+
+service Employee {
+
+  rpc getDetails (EmployeeRequest) returns (EmployeeResponse) {}
+  rpc createEmployee (EmployeeDetails) returns (EmployeeResponse) {}
+  rpc changeStatus (EmployeeDetails) returns (EmployeeResponse) {}
+  rpc turnOff (EmployeeDetails) returns (EmployeeResponse) {}
+}
+
+
+message EmployeeRequest {
+  int32 id = 1;
+}
+
+message EmployeeResponse{
+  EmployeeDetails message = 1;
+}
+message EmployeeDetails {
+  int32 id = 1;
+  string nome =2;
+  bool status = 3;
+  int32 idSensor = 4;
+}
+

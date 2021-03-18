@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+package sensor;
+
+service Sensor {
+
+  rpc getDetailsSensor ( SensorRequest) returns ( SensorResponse) {}
+  rpc createSensor ( SensorDetails) returns ( SensorResponse) {}
+  rpc changeValue (SensorDetails) returns (SensorResponse) {}
+}
+
+
+message SensorRequest {
+  int32 id = 1;
+}
+
+message  SensorResponse{
+    SensorDetails message = 1;
+}
+message  SensorDetails {
+  int32 id = 1;
+  float valor = 2;
+}
+
