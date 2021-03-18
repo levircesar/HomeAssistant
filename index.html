@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<title>Sistemas Distribuidos</title>
+	<meta charset="UTF-8">
+    <meta name="description" content="conteudo">
+    <meta cname="keywords" content="palavras,separadas,por,virgula">
+    <meta name="author" content="Levir">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="/css/style.css" />
+</head>
+<body>
+	<!-- Div com o formulário de acesso, para inserir o apelido -->
+
+
+	<div id='sala_chat'>
+		<sidebar >
+			<div class="Menu">
+				<h2>Painel de Comandos</h2>
+				<p>Sistemas Distribuidos</p>
+			</div>
+			<div class="sidebarBtn" id="lampada" >Lampada ON/OFF</div>
+			<form  id="criarFormDispositivo">
+				<input type="text" name="criarName" placeholder="digite o nome "/>
+				<input type="text" name="criarId" placeholder="digite o ID"/>
+				<input type="text" name="criarIdSensorDispositivo" placeholder="digite o ID do sensor"/>
+				<input type="text" name="criarStatus" placeholder="digite o status"/>
+			</form>
+			<div class="sidebarBtn"  id="criarDispositivo" >criar dispositivo</div>
+
+			<form id="criarFormSensor">
+				<input type="text" name="criarNameSensor" placeholder="digite o nome "/>
+				<input type="text" name="criarIdSensor" placeholder="digite o ID"/>
+				<input type="text" name="criarValorSensor" placeholder="digite o valor"/>
+			</form>
+			<div class="sidebarBtn"  id="criarSensor" >criar sensor</div>
+			<form>
+				<input type="text" name="IdNovoValor" placeholder="Digite o Id que quer alterar"/>
+				<input type="text" name="novoValor" placeholder="novo valor"/>
+			</form>
+			<div class="sidebarBtn"  id="alterarValor" >Alterar valor</div>
+			
+
+
+			<input type="text" name="change" placeholder="digite o id"/>
+			<div class="sidebarBtn"  id="change" >change</div>
+			
+			<!--<div class="sidebarBtn" id="sair">SAIR</div>-->
+		</sidebar>
+	
+	</div>		
+
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script type="text/javascript" src="/socket.io/socket.io.js"></script>
+	<script src="bundle.js"></script>
+</body>
+</html>
